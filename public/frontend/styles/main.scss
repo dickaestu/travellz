@@ -1,0 +1,526 @@
+body {
+    background-color: #fff;
+    font-family: 'Assistant', sans-serif;
+    color: #DB593F;
+}
+
+//Navbar
+.navbar-brand {
+    img {
+        max-height: 40px;
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            color: #DB593F;
+            font-size: 20px;
+            font-weight: 300;
+
+            &.active {
+                font-weight: 600;
+                color: #DB593F !important;
+            }
+        }
+    }
+}
+
+.btn-navbar-right {
+    margin-top: -10px !important;
+    margin-bottom: -8px !important;
+    margin-right: -18px !important;
+
+    height: 70px;
+    border-radius: 0;
+}
+
+.btn-login {
+    background-color: #DB593F;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+
+
+    &:hover {
+        background-color: #E82F0B;
+        color: #fff;
+    }
+}
+
+
+//Header
+header {
+    padding: 180px 0px 165px;
+    margin-top: -70px;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+
+    h1,
+    p {
+        color: #fff;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+
+    .btn-get-started {
+        background-color: #FCC12B;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+
+        &:hover {
+            background-color: #F5CD67;
+            color: #fff;
+        }
+    }
+}
+
+//Statistik
+
+.section-stats {
+    margin-top: -50px;
+
+    .stats-detail {
+        padding-top: 16px;
+        background-color: #fff;
+        padding-left: 50px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+//Popular Wisata
+.section-popular {
+    background-color: #C54F37;
+    min-height: 540px;
+    margin-top: -50px;
+
+    .section-popular-heading {
+        margin-top: 150px;
+
+        h2,
+        p {
+            color: #fff;
+        }
+
+        h2 {
+            font-family: 'Playfair Display';
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+.section-popular-content {
+    margin-top: -200px;
+
+    .section-popular-travel {
+        .card-travel {
+            min-height: 380px;
+            background-color: #b4b4b4;
+            color: #fff;
+            padding: 30px 15px;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+
+        .travel-country {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .travel-location {
+            font-size: 26px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .travel-button {
+            .btn-travel-details {
+                background-color: #FCC12B;
+                color: #fff;
+
+                &:hover {
+                    background-color: #F5CD67;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.section-networks {
+    background-color: #fff;
+    margin-top: -200px;
+    padding-top: 240px;
+    padding-bottom: 70px;
+
+    h2 {
+        font-family: 'Playfair Display';
+        font-weight: 700;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.section-testimonial-heading {
+    background: linear-gradient(#fff 0%, #feefec 100%);
+    padding-top: 30px;
+    min-height: 506px;
+
+    h2 {
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.section-testimonial-content {
+    margin-top: -270px;
+    padding-bottom: 50px;
+
+    .card-testimonial {
+        padding: 50px 21px 22px;
+        border-radius: 11px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-content {
+        min-height: 380px;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .testimonial {
+        font-weight: 300;
+        font-size: 24px;
+        color: #6E6E6E;
+        min-height: 160px;
+    }
+
+    hr {
+        margin-left: -21px;
+        margin-right: -21px;
+    }
+
+    .trip-to {
+        font-size: 22px;
+        color: #6E6E6E;
+    }
+
+    .btn-try-now {
+        background-color: #FCC12B;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+
+
+        &:hover {
+            background-color: #F5CD67;
+            color: #fff;
+        }
+    }
+
+    .btn-need-help {
+        background-color: #F2F2F2;
+        color: #C3C3C3;
+        font-size: 20px;
+        font-weight: 300;
+
+
+        &:hover {
+            background-color: #b4b4b4;
+            color: #fff;
+        }
+    }
+
+}
+
+.section-footer {
+    h5 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #DB593F;
+        font-size: 18px;
+    }
+}
+
+.section-details-header {
+    min-height: 310px;
+    background-color: #FEE4DF;
+    margin-top: -70px;
+}
+
+.section-details-content {
+    margin-top: -210px;
+    min-height: 100vh;
+
+
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .breadcrumb-item {
+        font-size: 20px;
+
+        &.active {
+            font-weight: bold;
+            color: #DB593F;
+            font-size: 20px;
+        }
+    }
+
+
+    .card-details {
+        padding: 30px;
+        border-radius: 11px;
+
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #B1B1B1;
+        }
+
+        h3 {
+            color: #C54F37;
+            font-size: 16px;
+        }
+
+        .trip-information {
+            th {
+                font-weight: 300;
+            }
+
+            .text-price {
+                font-weight: 600;
+            }
+
+            .text-unique {
+                color: #1abc9c;
+            }
+        }
+
+        .payment-instruction {
+            font-weight: 300;
+            font-size: 14px;
+            color: #b1b1b1;
+        }
+
+        .bank {
+            .bank-item {
+                h3 {
+                    font-size: 18px;
+                    color: #C54F37;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    color: #C54F37;
+                    font-weight: 600;
+                }
+
+                .description {
+                    margin-left: 10px;
+                    overflow: hidden;
+                    float: left;
+                }
+
+            }
+
+            .bank-image {
+                width: 45px;
+                height: 45px;
+                float: left;
+            }
+        }
+
+        .disclaimer {
+            font-weight: 300;
+            font-size: 14px;
+            color: #B1B1B1;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #DB593F;
+            font-weight: 600;
+        }
+
+        .gj-datepicker {
+            .datepicker {
+                border-right: 0;
+            }
+
+            .input-group-append {
+                .btn {
+                    padding-right: 30px;
+
+                }
+            }
+        }
+
+        .btn-add-now {
+            background-color: #FCC12B;
+            color: #fff;
+            font-weight: 600;
+
+            &:hover {
+                background-color: #F5CD67;
+                color: #fff;
+            }
+        }
+
+
+    }
+
+    .card-right {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none;
+    }
+
+    .features {
+        margin-top: 20px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #B1B1B1;
+        }
+
+        .description {
+            margin-left: 10px;
+            float: left;
+        }
+
+        .features-image {
+            width: 45px;
+            height: 45px;
+            float: left;
+        }
+    }
+
+    .gallery {
+        .xzoom-container {
+            display: block;
+
+            .xzoom {
+                width: 100%;
+                box-shadow: none;
+                margin-bottom: 10px;
+            }
+
+            .xactive {
+                border: 4px solid #F9F57E;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .member-image {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .join-container {
+        margin-top: -16px;
+    }
+
+    .btn-join-now {
+        background-color: #FCC12B;
+        color: #fff;
+        border-radius: 0;
+        font-weight: 600;
+        font-size: 20px;
+
+        &:hover {
+            background-color: #F5CD67;
+            color: #fff;
+        }
+    }
+
+}
+
+
+.success-checkout {
+    h3 {
+        font-weight: 600;
+        font-size: 18px;
+
+    }
+
+    .btn-home-page {
+        background-color: #DB593F;
+        color: #fff;
+        font-size: 20px;
+        width: 140px;
+        margin-top: 50px;
+
+
+        &:hover {
+            background-color: #E82F0B;
+            color: #fff;
+        }
+    }
+}

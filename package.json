@@ -30,7 +30,9 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mjml": "^4.6.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dickaestu/travellz.git"

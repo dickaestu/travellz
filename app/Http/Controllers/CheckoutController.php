@@ -7,6 +7,8 @@ use App\Transaction;
 use App\TransactionDetail;
 use App\TransactionPackage;
 use App\TravelPackage;
+use Mail;
+use App\Mail\TransactionSuccess;
 
 use Carbon\Carbon;
 use illuminate\Support\Facades\Auth;
@@ -95,12 +97,22 @@ class CheckoutController extends Controller
     }
 
     public function success(Request $request, $id){
-        $transaction = Transaction::findOrFail($id);
+        $transaction = Transaction::with(['details','travel_package.galleries','user'])->findOrFail($id);
         $transaction->transaction_status = 'PENDING';
 
 
         $transaction->save();
 
+        
+
+       
+
+        
+
+        // Kirim email ke user e ticketnya
+        Mail::to($transaction->user)->send(
+            new TransactionSuccess($transaction)
+        );
          return view('pages.success');
     }
 

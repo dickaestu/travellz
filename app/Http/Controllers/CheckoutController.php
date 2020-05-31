@@ -11,6 +11,8 @@ use Mail;
 use App\Mail\TransactionSuccess;
 
 use Carbon\Carbon;
+use Midtrans\Config;
+use Midtrans\Snap;
 use illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
@@ -103,79 +105,47 @@ class CheckoutController extends Controller
 
         $transaction->save();
 
+        //set konfigurasi midtrans
+        Config::$serverKey = config('midtrans.serverKey');
+        Config::$isProduction = config('midtrans.isProduction');
+        Config::$isSanitized = config('midtrans.isSanitized');
+        Config::$is3ds = config('midtrans.is3ds');
+
+        //buat array untuk dikirim ke midtrans
+        $midtrans_params =[
+            'transaction_details'=>[
+                'order_id'=>'TEST-' . $transaction->id,
+                'gross_amount'=>(int)$transaction->transaction_total
+            ],
+            'customer_details'=>[
+                'first_name'=>$transaction->user->name,
+                'email'=>$transaction->user->email
+            ],
+            'enabled_payments'=>['gopay'],
+            'vtweb'=>[]
+        ];
+
+        try {
+            //Ambil halaman payment midtrans
+            $paymentUrl = Snap::createTransaction($midtrans_params)->redirect_url;
+            
+            //redirect ke halaman midtrans
+            return redirect($paymentUrl);
+            
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+
+
+
         
-
-       
-
-        
-
         // Kirim email ke user e ticketnya
-        Mail::to($transaction->user)->send(
-            new TransactionSuccess($transaction)
-        );
-         return view('pages.success');
+        // Mail::to($transaction->user)->send(
+        //     new TransactionSuccess($transaction)
+        // );
+        //  return view('pages.success');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
    
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

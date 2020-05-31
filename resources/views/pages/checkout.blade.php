@@ -135,39 +135,8 @@
                             </table>
                             <hr>
                             <h2>Payment Instruction</h2>
-                            <p class="payment-instruction">Please complete payment before you
-                                continue the wonderful trip</p>
-                            <div class="bank">
-                                <div class="bank-item pb-3">
-                                <img src="{{url ('frontend/images/icon_bank.png')}}" class="bank-image">
-                                    <div class="description">
-                                        <h3>
-                                            PT Travellz
-                                        </h3>
-                                        <p>
-                                            2145919249
-                                            <br>
-                                            Bank Central Asia
-                                        </p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-
-                                <div class="bank-item pb-3">
-                                <img src="{{ url ('frontend/images/icon_bank.png') }}" class="bank-image">
-                                    <div class="description">
-                                        <h3>
-                                            PT Travellz
-                                        </h3>
-                                        <p>
-                                            21512561235
-                                            <br>
-                                            Bank HSBC
-                                        </p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
+                            <p class="payment-instruction">You Will Be Redirected Another Page To Pay Using GO-PAY</p>
+                       <img src="{{ url('frontend/images/gopay-logo.png') }}" alt="GO-PAY Logo" class="w-50">
                         </div>
                         <div class="join-container">
                             <a href="{{route('checkout-success',$item->id)}}" type="button" class="btn btn-block btn-join-now mt-3 py-2" >I Have Mad Payment</a>
